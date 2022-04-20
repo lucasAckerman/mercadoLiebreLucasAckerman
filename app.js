@@ -7,7 +7,7 @@ const expressPort = 3030;
 const publicPath = path.resolve(__dirname, './public')
 app.use(express.static(publicPath))
 
-app.listen(expressPort, () => {
+app.listen(process.env.PORT || expressPort, () => {
   console.log(`Servidor iniciado en el puerto: ${expressPort}`)
 })
 
